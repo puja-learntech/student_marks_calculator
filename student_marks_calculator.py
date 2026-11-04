@@ -5,8 +5,9 @@ A beginner-friendly Python practice project for learning Git.
 
 def calculate_percentage(marks):
     total = sum(marks)
-    percentage = total / len(marks)
-    return total, percentage
+    percentage = total / len(marks) 
+    average = total / len(marks)
+    return total, percentage,average
 
 
 def get_grade(percentage):
@@ -26,13 +27,15 @@ def main():
     student_name = "Rahul"
     marks = [85, 92, 78, 88, 95]
 
-    total, percentage = calculate_percentage(marks)
+    total, percentage, average = calculate_percentage(marks)
     grade = get_grade(percentage)
 
     print("Student:", student_name)
     print("Marks:", marks)
     print("Total:", total)
     print("Percentage:", round(percentage, 2), "%")
+    print("average:", round(average, 2))
+
     print("Grade:", grade)
 
 
